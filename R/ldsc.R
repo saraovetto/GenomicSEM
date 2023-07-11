@@ -510,6 +510,8 @@ ldsc <- function(traits, sample.prev, population.prev, ld, wld,
     }
   }
 
+  # save S matrix
+  save(S, file="S.Rdata")
 
   if(all(diag(S) > 0)){
 
