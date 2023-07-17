@@ -513,6 +513,11 @@ ldsc <- function(traits, sample.prev, population.prev, ld, wld,
   # save S matrix
   #save(S, file="S.Rdata")
 
+  # compute SE and save them in a matrix
+  r<-nrow(S)
+  SE<-matrix(0, r, r)
+  SE[lower.tri(SE,diag=TRUE)] <-sqrt(diag(V))
+
   if(all(diag(S) > 0)){
 
     rownames(S) <- colnames(S)
