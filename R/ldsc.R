@@ -617,6 +617,7 @@ ldsc <- function(traits, sample.prev, population.prev, ld, wld,
   close(log.file)
 
   if(stand){
+    list(V=V,S=S,I=I,N=N.vec,m=m,V_Stand=V_Stand,S_Stand=S_Stand)
     list(V=V,S=S,SE=SE,I=I,N=N.vec,m=m,V_Stand=V_Stand,S_Stand=S_Stand,SE_Stand=SE_Stand)
   } else {
     list(V=V,S=S,SE=SE,I=I,N=N.vec,m=m)
